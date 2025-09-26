@@ -1,2 +1,16 @@
-# DJANGO_AMZA_3IA2_CLASSE
-DJANGO_AMZA_3IA2_CLASSE est un projet développé dans le cadre des cours de la classe 3IA2, visant à illustrer l’utilisation du framework Django pour la création d’applications web modernes.
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
+$ git add .
+
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
+$ git commit -m "save x"
+
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
+$ git  fetch origin
+
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
+$ git pull origin Django_Classe --allow-unrelated-histories
+
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
+$ git push -u origin Django_Classe
+
+hp@DESKTOP-RIFG1GF MINGW64 ~/Desktop/Django_3IA2 (Django_Classe)
