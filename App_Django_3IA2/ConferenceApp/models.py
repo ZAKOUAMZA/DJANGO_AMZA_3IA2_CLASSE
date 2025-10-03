@@ -1,8 +1,15 @@
 from django.db import models
+from django.core.validators import RegexValidator
+from django.core.exceptions import ValidationError
+name_validator = RegexValidator(
+        regex=r'^[a-zA-Z\s]+$',
+        
+        message='le titre de la conférence doit contenir uniquement des lettres et espaces (pas de chiffres).'
+)
 
 class Conference(models.Model):
     conference_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,validators=[name_validator])
     THEME = [
         ("IA","Computer science & IA"),
         ("SE","Science & eng"),
@@ -15,7 +22,9 @@ class Conference(models.Model):
     end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add= True)
     update = models.DateTimeField(auto_now=True)
-
+    def clean(self):
+        if self.start_date_date > self.end_date:
+            raise ValidationError("la date de debut doit être preexterieur à la date de fin.")
 
 
 class Submission(models.Model):
